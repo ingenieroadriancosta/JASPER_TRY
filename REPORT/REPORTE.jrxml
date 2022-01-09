@@ -16,14 +16,14 @@
 		<band height="80">
 			<image>
 				<reportElement x="10" y="12" width="52" height="52" uuid="dd39ab28-7888-4f94-b2ea-135b43b6f115"/>
-				<imageExpression><![CDATA["C:\\Users\\ADRIAN_COSTA\\ALL_FILES\\DEVELOPER\\JAVA\\JASPER\\REPORT\\banitsmo.jpg"]]></imageExpression>
+				<imageExpression><![CDATA["C:\\Users\\ADRIAN_COSTA\\ALL_FILES\\DEVELOPER\\JAVA\\JASPER\\REPORT\\ban.jpg"]]></imageExpression>
 			</image>
 			<staticText>
 				<reportElement x="0" y="0" width="555" height="80" uuid="e06e9843-1eee-46fa-9154-be1987c9cf9e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="28" isBold="true"/>
 				</textElement>
-				<text><![CDATA[BANITSMO]]></text>
+				<text><![CDATA[BANCO ISLANDIA]]></text>
 			</staticText>
 		</band>
 	</title>
