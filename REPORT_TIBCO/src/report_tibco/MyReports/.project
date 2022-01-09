@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>MyReports</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>net.sf.jasperreports.builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>net.sf.jasperreports.nature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>REPORTE_1.jasper</name>
+			<type>1</type>
+			<location>C:/Users/ADRIAN_COSTA/ALL_FILES/DEVELOPER/JAVA/JASPER/REPORT/REPORTE.jasper</location>
+		</link>
+		<link>
+			<name>REPORTE_1.jrxml</name>
+			<type>1</type>
+			<location>C:/Users/ADRIAN_COSTA/ALL_FILES/DEVELOPER/JAVA/JASPER/REPORT/REPORTE.jrxml</location>
+		</link>
+		<link>
+			<name>practica_paises.jasper</name>
+			<type>1</type>
+			<location>C:/Users/ADRIAN_COSTA/ALL_FILES/DEVELOPER/JAVA/JASPER/EjemploJavaConJasperreport/src/reports/practica_paises.jasper</location>
+		</link>
+		<link>
+			<name>practica_paises.jrxml</name>
+			<type>1</type>
+			<location>C:/Users/ADRIAN_COSTA/ALL_FILES/DEVELOPER/JAVA/JASPER/EjemploJavaConJasperreport/src/reports/practica_paises.jrxml</location>
+		</link>
+	</linkedResources>
+</projectDescription>
