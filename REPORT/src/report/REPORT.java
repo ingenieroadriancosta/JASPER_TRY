@@ -6,57 +6,29 @@
 package report;
 
 import com.mysql.jdbc.Connection;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
-
-
-
-import net.sf.jasperreports.engine.JRException;
-import net.sf.jasperreports.engine.JRExporterParameter;
-import net.sf.jasperreports.engine.JasperExportManager;
-import net.sf.jasperreports.engine.JasperFillManager;
-import net.sf.jasperreports.engine.JasperPrint;
-import net.sf.jasperreports.engine.JasperRunManager;
-import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
-import net.sf.jasperreports.engine.export.JRXlsExporter;
-import net.sf.jasperreports.engine.export.ooxml.JRDocxExporter;
-import net.sf.jasperreports.engine.export.ooxml.JRPptxExporter;
 
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.WindowConstants;
-import net.sf.jasperreports.engine.JREmptyDataSource;
 
 import net.sf.jasperreports.engine.JRException;
-import net.sf.jasperreports.engine.JRExporterParameter;
+import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
-import net.sf.jasperreports.engine.JasperRunManager;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
-import net.sf.jasperreports.engine.export.JRXlsExporter;
-import net.sf.jasperreports.engine.export.ooxml.JRDocxExporter;
-import net.sf.jasperreports.engine.export.ooxml.JRPptxExporter;
-import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.engine.design.JasperDesign;
+import net.sf.jasperreports.engine.xml.JRXmlLoader;
 import net.sf.jasperreports.view.JasperViewer;
 
 /**
@@ -77,23 +49,18 @@ public class REPORT {
     void exportTo(){
         try {
             // TODO code application logic here
-            
-            
-            
-            
-            
-            
-            
-            
+            //
+            // Load the jrxml file
+            JasperDesign jasperDesign = JRXmlLoader.load(getClass().getResource("/JasperReports/REPORTE.jrxml").getFile());
+            // Compile the jrxml file
+            JasperReport jasperReport = JasperCompileManager.compileReport(jasperDesign);
             
             JRBeanCollectionDataSource studentDataSource = new JRBeanCollectionDataSource(call(), true);
-            JasperPrint jasperPrint = JasperFillManager.fillReport("REPORTE.jasper", null, studentDataSource ); //  new UsersJRDataSource()     new JRBeanCollectionDataSource(this.call()) 
-            // JasperPrint jasperPrint = JasperFillManager.fillReport("REPORTE.jasper", null, new JRBeanCollectionDataSource(call()));
+            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, null, studentDataSource ); //  new UsersJRDataSource()     new JRBeanCollectionDataSource(this.call()) 
             
-            File file = new File("F.pdf");
+            // File file = new File("F.pdf");
             
-    
-            JasperExportManager.exportReportToPdfStream(jasperPrint, new FileOutputStream(file) );
+            // JasperExportManager.exportReportToPdfStream(jasperPrint, new FileOutputStream(file) );
             
             
             JasperViewer jasview = new JasperViewer( jasperPrint, false );
@@ -103,7 +70,7 @@ public class REPORT {
             
             
             
-        } catch (JRException | IOException ex) {
+        } catch (JRException ex) {
             Logger.getLogger(REPORT.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -113,7 +80,7 @@ public class REPORT {
     List<Users> call(){
         try{  
             Class.forName("com.mysql.jdbc.Driver");  
-            Connection con=(Connection) DriverManager.getConnection( "jdbc:mysql://localhost:3306","root","" );  
+            Connection con=(Connection) DriverManager.getConnection( "jdbc:mysql://localhost:3306","root","root" );  
             //here sonoo is database name, root is username and password  
             Statement stmt=con.createStatement();  
             stmt.execute("use springbootdb;");
