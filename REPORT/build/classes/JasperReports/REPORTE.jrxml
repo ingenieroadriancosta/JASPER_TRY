@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="REPORTE" pageWidth="595" pageHeight="500" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6eaf3664-f9e6-4df2-8b3c-4e2af46e39a1">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="REPORTE" pageWidth="259" pageHeight="360" whenNoDataType="AllSectionsNoDetail" columnWidth="259" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6eaf3664-f9e6-4df2-8b3c-4e2af46e39a1">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -12,28 +12,10 @@
 	<background>
 		<band splitType="Stretch"/>
 	</background>
-	<title>
-		<band height="80">
-			<image>
-				<reportElement x="10" y="12" width="52" height="52" uuid="dd39ab28-7888-4f94-b2ea-135b43b6f115"/>
-				<imageExpression><![CDATA["C:\\Users\\ADRIAN_COSTA\\ALL_FILES\\DEVELOPER\\JAVA\\JASPER\\REPORT\\ban.jpg"]]></imageExpression>
-			</image>
-			<staticText>
-				<reportElement x="0" y="0" width="555" height="80" uuid="e06e9843-1eee-46fa-9154-be1987c9cf9e"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="28" isBold="true"/>
-				</textElement>
-				<text><![CDATA[BANCO ISLANDIA]]></text>
-			</staticText>
-		</band>
-	</title>
-	<pageHeader>
-		<band height="78"/>
-	</pageHeader>
 	<columnHeader>
-		<band height="39">
+		<band height="23">
 			<staticText>
-				<reportElement x="176" y="0" width="100" height="23" uuid="7a20854a-da0d-4914-8cd2-8fed314f85c6"/>
+				<reportElement x="148" y="0" width="113" height="23" uuid="7a20854a-da0d-4914-8cd2-8fed314f85c6"/>
 				<textElement textAlignment="Center">
 					<font size="16"/>
 				</textElement>
@@ -51,7 +33,7 @@
 	<detail>
 		<band height="46">
 			<textField>
-				<reportElement stretchType="RelativeToBandHeight" x="176" y="0" width="100" height="46" uuid="6393550e-cbd4-45be-b595-fd705718e629"/>
+				<reportElement stretchType="RelativeToBandHeight" x="148" y="0" width="113" height="46" uuid="6393550e-cbd4-45be-b595-fd705718e629"/>
 				<textElement textAlignment="Center">
 					<font size="14"/>
 				</textElement>
@@ -66,7 +48,4 @@
 			</textField>
 		</band>
 	</detail>
-	<noData>
-		<band height="50"/>
-	</noData>
 </jasperReport>

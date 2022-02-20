@@ -27,19 +27,20 @@
 			<location>C:/Users/ADRIAN_COSTA/ALL_FILES/DEVELOPER/JAVA/JASPER/REPORT/REPORTE.jasper</location>
 		</link>
 		<link>
-			<name>REPORTE_1.jrxml</name>
-			<type>1</type>
-			<location>C:/Users/ADRIAN_COSTA/ALL_FILES/DEVELOPER/JAVA/JASPER/REPORT/REPORTE.jrxml</location>
-		</link>
-		<link>
 			<name>practica_paises.jasper</name>
 			<type>1</type>
 			<location>C:/Users/ADRIAN_COSTA/ALL_FILES/DEVELOPER/JAVA/JASPER/EjemploJavaConJasperreport/src/reports/practica_paises.jasper</location>
 		</link>
-		<link>
-			<name>practica_paises.jrxml</name>
-			<type>1</type>
-			<location>C:/Users/ADRIAN_COSTA/ALL_FILES/DEVELOPER/JAVA/JASPER/EjemploJavaConJasperreport/src/reports/practica_paises.jrxml</location>
-		</link>
 	</linkedResources>
+	<filteredResources>
+		<filter>
+			<id>1644652389890</id>
+			<name></name>
+			<type>30</type>
+			<matcher>
+				<id>org.eclipse.core.resources.regexFilterMatcher</id>
+				<arguments>node_modules|.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+			</matcher>
+		</filter>
+	</filteredResources>
 </projectDescription>

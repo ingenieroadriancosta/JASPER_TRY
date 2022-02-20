@@ -5,6 +5,8 @@
  */
 package report;
 
+import java.util.List;
+
 /**
  *
  * @author ADRIAN_COSTA
